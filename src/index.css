@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;400;500;700&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600;700&family=Poppins:wght@300;400;700&family=Roboto:wght@100;700&family=Sen:wght@400;700&family=Source+Code+Pro:wght@400;700&family=Space+Grotesk:wght@500;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --tw-base-font-size: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+.font-josefin {
+  font-family: 'Josefin Sans', sans-serif;
+}
