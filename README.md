@@ -53,4 +53,6 @@ Contributions are always welcome!
 
 If you want to contribute to the weather app, feel free to create a pull request. Make sure to follow the existing coding style and write unit tests for any new functionality.
 
+## API Reference
+The app uses [OpenWeatherMap API](https://openweathermap.org/api). Read the API docs for more info.
 
