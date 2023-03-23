@@ -10,8 +10,8 @@ const Search = ({ getData }) => {
     }
 
     return (
-        <form className="input relative w-[330px] h-[30px] mx-auto my-7" onSubmit = {sendData}>
-            <input type="text" id='input' className='w-[330px] h-[30px] opacity-50 rounded-full border-none outline-none px-3 text-black caret-transparent py-1 font-poppins tracking-wider' placeholder='Search your city' onChange={(e) => { setName (e.target.value) }} />
+        <form className="input relative w-[200px] h-[30px] sm:w-[330px] mx-auto my-7" onSubmit = {sendData}>
+            <input type="text" id='input' className='w-[200px] h-[30px] opacity-50 rounded-full border-none outline-none px-3 text-black font-normal caret-transparent py-1 font-poppins tracking-wider placeholder:text-black placeholder:opacity-100 sm:w-[330px]' placeholder='Search your city' onChange={(e) => { setName (e.target.value) }} />
 
             <button type='submit'>
                 <img src={searchIcon} className='absolute top-1/2 -translate-y-1/2 right-3 w-[16px]' />

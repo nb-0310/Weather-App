@@ -17,6 +17,7 @@ import fogIcon from '../public/Assets/fogIcon.svg'
 import wallpaper from '../public/Assets/wallpaper.jpg'
 import Search from './Components/Search'
 import WeatherParent from './Components/WeatherParent'
+import Footer from './Components/Footer'
 
 function App() {
 
@@ -83,6 +84,8 @@ function App() {
       <Search getData = {recieveData} />
 
       <WeatherParent searchTerm = {data} getUIData = {UIData} icon = {icon} />
+
+      <Footer />
 
     </div>
   )

@@ -48,7 +48,7 @@ const WeatherParent = ({ searchTerm, getUIData, icon }) => {
   if (apiData && Weather['id']) getUIData (Weather['id'])
 
   return (
-    <div className='w-full flex justify-between'>
+    <div className='w-full flex flex-col sm:flex-row justify-between items-center sm:justify-between h-[70vh] sm:h-auto'>
       <BriefWeather data={Weather} icon = {icon} />
       <DetailedWeather data={Weather} />
     </div>
