@@ -8,25 +8,40 @@ const WeatherParent = ({ searchTerm, getUIData, icon }) => {
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${searchTerm}&appid=${API_KEY}`
 
   const [apiData, setApiData] = useState()
-  let error = false
+  const [err, setErr] = useState(false)
 
   useEffect(() => {
+    setErr (false)
     if (searchTerm) {
       fetch(url)
-        .then(res => res.json())
+        .then(res => {
+          if (res.ok) {
+            setErr (false)
+            console.log (res)
+            return res.json()
+          } else {
+            setErr (true)
+          }
+        })
         .then((data) => {
           setApiData(data)
+          console.log (data)
         })
-        .catch((err) => {
-          error = true
-          console.error(err)
+        .catch((e) => {
+          setErr (true)
         })
     }
-  }, [searchTerm])
-  
-  if (error) return (
-    <div className='text-red-700 text-lg font-poppins'>City not found!</div>
-  )
+
+  }, [searchTerm, url])
+
+  if (err === true) {
+    return (
+      <div className='absolute left-10 top-20 font-poppins'>
+        <h1 className='text-3xl font-bold text-red-400'>City Not Found! &#128557;</h1>
+        <p className='text-lg text-white'>Please enter a valid nity name</p>
+      </div>
+    )
+  }
 
   if (!apiData) return (
     <div></div>

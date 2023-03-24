@@ -1,5 +1,5 @@
 import React from 'react'
-import cloud from '../../public/Assets/cloudIcon1.svg'
+import PropTypes from 'prop-types'
 
 const BriefWeather = ({ data, icon }) => {
   const d = new Date (data['date'] * 1000)
@@ -16,6 +16,11 @@ const BriefWeather = ({ data, icon }) => {
       <h1 className=' text-orange-400 text-[20px] sm:text-[25px] font-josefin font-normal text-right mt-2'>{date}</h1>
     </div>
   )
+}
+
+BriefWeather.propTypes = {
+  data: PropTypes.object,
+  icon: PropTypes.img
 }
 
 export default BriefWeather

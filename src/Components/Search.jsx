@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import PropTypes from 'prop-types'
 import searchIcon from '../../public/Assets/search.svg'
 
 const Search = ({ getData }) => {
@@ -18,6 +19,10 @@ const Search = ({ getData }) => {
             </button>
         </form>
     )
+}
+
+Search.propTypes = {
+    getData: PropTypes.func
 }
 
 export default Search

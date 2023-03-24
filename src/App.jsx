@@ -25,17 +25,6 @@ function App() {
   const [ui, setUI] = useState()
   const [img, setImg] = useState(wallpaper)
   const [icon, setIcon] = useState(cloudIcon1)
-  // console.log (ui)
-
-  // const UI_OBJ = {
-  //   'light clouds': [cloud1, cloudIcon1],
-  //   'heavy clouds': [cloud2, cloudIcon2],
-  //   'thunder': [thunder, thunderIcon],
-  //   'snow': [snow, snowIcon],
-  //   'rain': [rain, rainIcon],
-  //   'sun': [sunny, sunnyIcon],
-  //   'fog': [fog, fogIcon]
-  // }
 
   const recieveData = (data) => {
     setData (data)
@@ -73,9 +62,6 @@ function App() {
       }
     }
   }, [ui])
-  
-
-  console.log (ui)
 
   return (
     <div className="App w-full h-screen overflow-hidden">
