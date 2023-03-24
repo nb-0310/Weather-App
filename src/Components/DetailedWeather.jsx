@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 const DetailedWeather = ({ data }) => {
   return (
-    <div className='flex justify-between items-center sm:mr-[20px] w-[300px] sm:w-[400px] bg-black opacity-30 sm:opacity-50 rounded-2xl text-white sm:py-[5px] pl-[50px] pr-[60px]'> 
+    <div className='flex justify-between items-center sm:mr-[20px] py-3 sm:py-3 w-[300px] sm:w-[400px] bg-black opacity-30 sm:opacity-50 rounded-2xl text-white sm:py-[5px] pl-[50px] pr-[60px]'> 
         <div className='flex justify-start flex-col'>
             <h1 className='text-white sm:text-[25px] font-normal font-poppins'>Feels Like</h1>
             <h1 className='text-white sm:text-[25px] font-normal font-poppins'>Humidity</h1>
