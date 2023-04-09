@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import PropTypes from 'prop-types'
+import { IconContext } from '../App'
 
-const BriefWeather = ({ data, icon }) => {
+const BriefWeather = ({ data }) => {
   const d = new Date (data['date'] * 1000)
   const date = d.toLocaleDateString ()
+  const icon = useContext(IconContext)
 
   return (
     <div className='sm:ml-[20px] w-[200px] sm:w-[300px] bg-black opacity-30 sm:opacity-50 rounded-2xl text-white py-[10px] pl-[50px] pr-[60px] leading-none'>

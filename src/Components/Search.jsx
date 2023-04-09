@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import searchIcon from '../../public/Assets/search.svg'
+import searchIcon from '../../public/search.svg'
 
 const Search = ({ getData }) => {
     const [name, setName] = useState ()

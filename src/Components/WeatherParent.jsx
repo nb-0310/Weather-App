@@ -4,7 +4,7 @@ import API_KEY from '../APIkey'
 import BriefWeather from './BriefWeather'
 import DetailedWeather from './DetailedWeather'
 
-const WeatherParent = ({ searchTerm, getUIData, icon }) => {
+const WeatherParent = ({ searchTerm, getUIData }) => {
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${searchTerm}&appid=${API_KEY}`
 
   const [apiData, setApiData] = useState()
@@ -64,7 +64,7 @@ const WeatherParent = ({ searchTerm, getUIData, icon }) => {
 
   return (
     <div className='w-full flex flex-col sm:flex-row justify-between items-center sm:justify-between h-[70vh] sm:h-auto'>
-      <BriefWeather data={Weather} icon = {icon} />
+      <BriefWeather data={Weather} />
       <DetailedWeather data={Weather} />
     </div>
   )

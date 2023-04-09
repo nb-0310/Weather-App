@@ -1,23 +1,25 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, createContext } from 'react'
 import './index.css'
-import cloud1 from '../public/Assets/cloudy1.jpg'
-import cloudIcon1 from '../public/Assets/cloudIcon1.svg'
-import cloud2 from '../public/Assets/cloudy2.jpg'
-import cloudIcon2 from '../public/Assets/cloudIcon2.svg'
-import thunder from '../public/Assets/thunderstorm.jpg'
-import thunderIcon from '../public/Assets/thunderIcon.svg'
-import snow from '../public/Assets/snowy.jpg'
-import snowIcon from '../public/Assets/snowIcon.svg'
-import rain from '../public/Assets/rainy.jpg'
-import rainIcon from '../public/Assets/rainIcon.svg'
-import sunny from '../public/Assets/sunny.png'
-import sunnyIcon from '../public/Assets/sunnyIcon.svg'
-import fog from '../public/Assets/foggy.jpg'
-import fogIcon from '../public/Assets/fogIcon.svg'
-import wallpaper from '../public/Assets/wallpaper.jpg'
+import cloud1 from './Assets/cloudy1.jpg'
+import cloudIcon1 from './Assets/cloudIcon1.svg'
+import cloud2 from './Assets/cloudy2.jpg'
+import cloudIcon2 from './Assets/cloudIcon2.svg'
+import thunder from './Assets/thunderstorm.jpg'
+import thunderIcon from './Assets/thunderIcon.svg'
+import snow from './Assets/snowy.jpg'
+import snowIcon from './Assets/snowIcon.svg'
+import rain from './Assets/rainy.jpg'
+import rainIcon from './Assets/rainIcon.svg'
+import sunny from './Assets/sunny.png'
+import sunnyIcon from './Assets/sunnyIcon.svg'
+import fog from './Assets/foggy.jpg'
+import fogIcon from './Assets/fogIcon.svg'
+import wallpaper from '../public/wallpaper.jpg'
 import Search from './Components/Search'
 import WeatherParent from './Components/WeatherParent'
 import Footer from './Components/Footer'
+
+export const IconContext = createContext(null)
 
 function App() {
 
@@ -69,7 +71,9 @@ function App() {
 
       <Search getData = {recieveData} />
 
-      <WeatherParent searchTerm = {data} getUIData = {UIData} icon = {icon} />
+      <IconContext.Provider value = {icon}>
+        <WeatherParent searchTerm = {data} getUIData = {UIData} icon = {icon} />
+      </IconContext.Provider>
 
       <Footer />
 
